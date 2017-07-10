@@ -1,3 +1,5 @@
+[<Back](index.md)
+
 ## Sqoop For SAP
 
 #### Regular CMD
@@ -6,23 +8,23 @@
 
 #### OPTIONS
 
---check-column id --incremental lastmodified --last-value 2017-01-01
+    --check-column id --incremental lastmodified --last-value 2017-01-01
 
--m
+    -m
 
---hive
+    --hive
 
 
 ## Sqoop for Oracle
 
 #### CMD with output format
 
-sqoop import --direct --connect "jdbc:oracle:thin:@<IP>:<PORT>/<REGION>" --username <USERNAME> --password <PASSWORD> --query 'SELECT * FROM TABLE where rownum < 1000000 and $CONDITIONS' --target-dir "/user/cloudera/ORACLE" --as-textfile --escaped-by \\ --enclosed-by '\"' -m 1
+    sqoop import --direct --connect "jdbc:oracle:thin:@<IP>:<PORT>/<REGION>" --username <USERNAME> --password <PASSWORD> --query 'SELECT * FROM TABLE where rownum < 1000000 and $CONDITIONS' --target-dir "/user/cloudera/ORACLE" --as-textfile --escaped-by \\ --enclosed-by '\"' -m 1
 
 #### OPTIONS
 
---enclosed-by
+    --enclosed-by
 
---escaped-by
+    --escaped-by
 
-$CONDITIONS
+    $CONDITIONS
